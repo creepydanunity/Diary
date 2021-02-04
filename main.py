@@ -36,6 +36,7 @@ class Application:
         self.ui.setupUi(self.main_window)
         self.main_window.show()
         self.ui.button_enter.clicked.connect(self.login_button_pressed)
+        self.ui.button_register.clicked.connect(lambda: webbrowser.open("https://docs.google.com/forms/d/17OsG-ncuNbhOrxpRrUZKgSHclN2EpyKTEvcKgew-fng"))
         locale.setlocale(locale.LC_ALL, ('RU', 'UTF8'))
         self.main()
 

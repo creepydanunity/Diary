@@ -464,7 +464,8 @@ class Application:
         t.start()
 
     def change_text_all_marks(self):
-        self.ui.all_marks.setText('Выписка оценок')
+        if type(self.ui) == Student_UI:
+            self.ui.all_marks.setText('Выписка оценок')
 
     def send_msg_student(self):
         self.reconstruct_ui(Add_comment_ui())
